@@ -1,10 +1,12 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint', 'plugin:prettier/recommended'],
+  extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   plugins: ['sort-destructure-keys'],
+  ignorePatterns: ['dist/', 'node_modules/', '.eslintrc.js'],
   parserOptions: {
     ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
     sourceType: 'module', // Allows for the use of imports
+    project: './tsconfig.json',
   },
   env: {
     es6: true,
